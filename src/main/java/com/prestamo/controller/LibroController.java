@@ -25,7 +25,7 @@ public class LibroController {
 	
 	@GetMapping("/listar")
 	public List<Libro> listar() {
-		restTemplate.postForObject("http://localhost:8091/url/auditoria/registrar?tipoBaseDatos=MONGODB&baseDeDatos=Cibertec&tabla=Libro", null, String.class);
+		restTemplate.postForObject("http://localhost:8091/url/auditoria/registra/MONGODB-Cibertec-Libro-listar", null, String.class);
 		return libroService.findAll();
 	}
 	
